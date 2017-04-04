@@ -15,14 +15,26 @@ app.get('/', function(req, res, next){
 });
 
 app.get('/users', function(req, res, next){
-  res.send(users.map((user) => {
+  const usersList = users.map((user) => {
     return user.firstName;
-  }).join(' '));
+  }).join(' ')
+
+  res.send(usersList);
+
 });
 
 
-app.get('/users/:nom', function(req, res, next){
-  res.send('Le nome de l\'utilisateur est ' + req.params.nom );
+app.get('/users/:id', function(req, res, next){
+    const userId = users.find((item) => {
+      return item.id === Number(req.params.id)
+    })
+    if (userId) {
+      res.send(userId.firstName);
+    }
+    else {
+      res.send('Cette page n\'existe pas');
+    }
+
 })
 
 
