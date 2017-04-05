@@ -1,0 +1,30 @@
+<!-- views/pages/users.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../Partials/head %>
+</head>
+
+<body>
+    <header>
+        <% include ../Partials/header %>
+    </header>
+
+    <main>
+        <div class="list-group">
+          <a href="#" class="list-group-item active">Professions</a>
+          <% professions.forEach(function(item){ %>
+            <a href="http://localhost:5000/professions/<%= item.id %>" class="list-group-item list-group-item-action"><%= item.name %></a>
+          <% }); %>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <% include ../Partials/footer %>
+    </footer>
+</body>
+
+</html>
