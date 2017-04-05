@@ -1,0 +1,30 @@
+<!-- views/pages/users.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../Partials/head %>
+</head>
+
+<body>
+    <header>
+        <% include ../Partials/header %>
+    </header>
+
+    <main>
+        <div class="list-group">
+          <a href="#" class="list-group-item active">La team P7</a>
+          <% users.forEach(function(item){ %>
+            <a href="http://localhost:5000/users/<%= item.id %>" class="list-group-item list-group-item-action"><%= item.firstName %></a>
+          <% }); %>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <% include ../Partials/footer %>
+    </footer>
+</body>
+
+</html>

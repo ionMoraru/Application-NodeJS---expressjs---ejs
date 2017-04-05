@@ -1,10 +1,9 @@
 # js-express-routes
 
-## installer express dans votre projet
+## Pour lancer le projet :  
 
-## créer un server express qui écoute en port 5000
-
-## démarrer le server avec node ou nodemon
+###  npm i
+###  npm run start-dev
 
 ## Ecrire 3 routes :
 
@@ -31,7 +30,10 @@ const users = [
 
 Par exemple, pour GET /users, il faut renvoyer une liste html (<ul><li>...)
 
-#### References EJS :
+#### References EJS, Bootstrap4,  :
 
 * http://ejs.co/
 * http://expressjs.com/fr/guide/using-template-engines.html
+* https://scotch.io/tutorials/use-ejs-to-template-your-node-application
+* https://v4-alpha.getbootstrap.com/components/card/
+* https://coligo.io/templating-node-and-express-apps-with-ejs/
